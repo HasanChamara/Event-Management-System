@@ -15,9 +15,6 @@ namespace EventManagementSystem
         public Form1()
         {
             InitializeComponent();
-            //This is the constructor of the form
-            //This is the first method that is called when the form is created
-            //This is where you can initialize the form
         }
     }
 }
