@@ -19,7 +19,7 @@ namespace EventManagementSystem
             InitializeComponent();
         }
 
-        string connectionString = "server=localhost;user=root;database=eventmanagement;port=3306;password=Chamara.19566";
+        string connectionString = "server=localhost;user=root;database=eventmanagement;port=3306;password=";
 
 
 
