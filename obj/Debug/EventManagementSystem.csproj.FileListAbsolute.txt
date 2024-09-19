@@ -41,3 +41,8 @@ E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSys
 E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventMan.F6E82884.Up2Date
 E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSystem.exe
 E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSystem.pdb
+E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSystem.frmAdminDashboard.resources
+E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSystem.frmAddEvent.resources
+E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSystem.frmAddParticipant.resources
+E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSystem.frmBook.resources
+E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSystem.frmBooking.resources
