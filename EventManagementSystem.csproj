@@ -116,6 +116,12 @@
     <Compile Include="frmAddParticipant.Designer.cs">
       <DependentUpon>frmAddParticipant.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddParticipantToEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddParticipantToEvent.Designer.cs">
+      <DependentUpon>frmAddParticipantToEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>

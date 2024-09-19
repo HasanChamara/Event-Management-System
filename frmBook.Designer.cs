@@ -80,6 +80,7 @@
             this.dataGridViewEvent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewEvent.Size = new System.Drawing.Size(799, 470);
             this.dataGridViewEvent.TabIndex = 8;
+            this.dataGridViewEvent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEvent_CellContentClick);
             // 
             // id
             // 

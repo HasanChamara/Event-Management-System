@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,12 +12,16 @@ using MySql.Data.MySqlClient;
 
 namespace EventManagementSystem
 {
+    
     public partial class frmBook : Form
     {
+
         public frmBook()
         {
             InitializeComponent();
         }
+
+        public int eventID;
 
         string connectionString = "server=localhost;user=root;database=eventmanagement;port=3306;password=Chamara.19566";
 
@@ -45,6 +50,19 @@ namespace EventManagementSystem
                 }
 
                 connection.Close();
+            }
+
+        }
+
+        private void dataGridViewEvent_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // when click the book image column, the selected event id assigned to the event id variable.
+            if (e.ColumnIndex == 6)
+            {
+                eventID = Convert.ToInt32(dataGridViewEvent.Rows[e.RowIndex].Cells[0].Value);
+                
+
+
             }
         }
     }
