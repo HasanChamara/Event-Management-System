@@ -15,13 +15,14 @@ namespace EventManagementSystem
     
     public partial class frmBook : Form
     {
+        public static int even;
 
         public frmBook()
         {
             InitializeComponent();
         }
 
-        public int eventID;
+        
 
         string connectionString = "server=localhost;user=root;database=eventmanagement;port=3306;password=Chamara.19566";
 
@@ -59,7 +60,10 @@ namespace EventManagementSystem
             // when click the book image column, the selected event id assigned to the event id variable.
             if (e.ColumnIndex == 6)
             {
-                eventID = Convert.ToInt32(dataGridViewEvent.Rows[e.RowIndex].Cells[0].Value);
+                even = Convert.ToInt32(dataGridViewEvent.Rows[e.RowIndex].Cells[0].Value);
+                this.Hide();
+                frmAddParticipantToEvent frmAddParticipantToEvent = new frmAddParticipantToEvent();
+                frmAddParticipantToEvent.Show();
                 
 
 

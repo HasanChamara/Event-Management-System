@@ -154,6 +154,9 @@
     <EmbeddedResource Include="frmAddParticipant.resx">
       <DependentUpon>frmAddParticipant.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddParticipantToEvent.resx">
+      <DependentUpon>frmAddParticipantToEvent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdminDashboard.resx">
       <DependentUpon>frmAdminDashboard.cs</DependentUpon>
     </EmbeddedResource>

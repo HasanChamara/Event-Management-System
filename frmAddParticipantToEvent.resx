@@ -132,22 +132,7 @@
   <metadata name="description.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="capacity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="select.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="book.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="book.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAATRJREFUSEvtlb0uBFEYQIeIchOVYiO0GoUoFDboaZQeQEOi1HoFpVfQaiQ6Wgpa
-        iehJNELC+jlnZ1bujDuxM7sJCSc52TvffD8zd2d2k9/GbObAGcFdbOMr7uEoDoRpPMd3PMp0bcxztRnC
-        DXzAJ9zBYSyLV2IcD9ErvcQZLOLVn6E5x9jEnljDW3zD7/Y6/G7ucR1LaeA+ekU3uIi9Mo9XaO0BjmGO
-        KbxGE/x0WFWsCXtM4idzeIFujftaF2vtYS97fsGE4oAtdOtibmJIrD5HLMEXy9uO6bmQWgNijUND/gdE
-        DfkDA07RF8VnvGUAYk1DxVxrrD0xUMYq3qGF/iRLsWFRMde1A1YMVKHb6AW30WbPWaw7oC/8U/GuljpH
-        Kcto7LFz1Cfu70S6zGFsIV3+GEnyAbbtphNicIQsAAAAAElFTkSuQmCC
-</value>
-  </data>
 </root>
