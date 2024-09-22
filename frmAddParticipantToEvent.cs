@@ -20,6 +20,7 @@ namespace EventManagementSystem
         public frmAddParticipantToEvent()
         {
             InitializeComponent();
+
         }
 
         string connectionString = "server=localhost;user=root;database=eventmanagement;port=3306;password=Chamara.19566";
@@ -48,9 +49,7 @@ namespace EventManagementSystem
 
 
         }
-
        
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -61,33 +60,62 @@ namespace EventManagementSystem
 
         private void btnAddToEvent_Click(object sender, EventArgs e)
         {
+            
             List<int> selectedRowIds = new List<int>();
 
-            foreach (DataGridViewRow row in dataGridViewParticipant.SelectedRows)
+            foreach (DataGridViewRow row in dataGridViewParticipant.Rows)
             {
-                selectedRowIds.Add(Convert.ToInt32(row.Cells[0].Value));
+                bool isChecked = Convert.ToBoolean(row.Cells[5].Value);
+
+                if (isChecked)
+                {
+                   
+                    int participantID = Convert.ToInt32(row.Cells[0].Value);
+                    selectedRowIds.Add(participantID);
+                }
             }
 
-
+            
             if (selectedRowIds.Count > 0)
             {
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
 
-                    foreach (int id in selectedRowIds)
+                    // Start a transaction to ensure all rows are inserted together
+                    MySqlTransaction transaction = connection.BeginTransaction();
+
+                    try
                     {
-                        string query = "INSERT INTO event_participant (event_id, participant_id) VALUES (@eventID, @participantID)";
-                        MySqlCommand command = new MySqlCommand(query, connection);
+                        foreach (int id in selectedRowIds)
+                        {
+                            
+                            string query = "INSERT INTO event_participant (event_id, participant_id) VALUES (@eventID, @participantID)";
+                            MySqlCommand command = new MySqlCommand(query, connection, transaction); // Pass transaction
 
-                        command.Parameters.AddWithValue("@eventID", frmBook.eventID);
-                        command.Parameters.AddWithValue("@participantID", id);
+                            
+                            command.Parameters.AddWithValue("@eventID", frmBook.eventID);
+                            command.Parameters.AddWithValue("@participantID", id);
 
-                        command.ExecuteNonQuery();
+                            
+                            command.ExecuteNonQuery();
+                        }
+
+                        // Commit the transaction after all inserts are done
+                        transaction.Commit();
+
+                        MessageBox.Show("Participants added to the event successfully!");
                     }
-
-                    MessageBox.Show("Participants added to the event successfully!");
-                    connection.Close();
+                    catch (Exception ex)
+                    {
+                        // If there's an error, roll back the transaction to prevent partial inserts
+                        transaction.Rollback();
+                        MessageBox.Show("Error adding participants: " + ex.Message);
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
                 }
             }
             else
