@@ -80,7 +80,7 @@ namespace EventManagementSystem
                         string query = "INSERT INTO event_participant (event_id, participant_id) VALUES (@eventID, @participantID)";
                         MySqlCommand command = new MySqlCommand(query, connection);
 
-                        command.Parameters.AddWithValue("@eventID", frmBook.even);
+                        command.Parameters.AddWithValue("@eventID", frmBook.eventID);
                         command.Parameters.AddWithValue("@participantID", id);
 
                         command.ExecuteNonQuery();

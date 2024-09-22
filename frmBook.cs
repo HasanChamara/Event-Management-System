@@ -15,7 +15,7 @@ namespace EventManagementSystem
     
     public partial class frmBook : Form
     {
-        public static int even;
+        public static int eventID;
 
         public frmBook()
         {
@@ -60,7 +60,7 @@ namespace EventManagementSystem
             // when click the book image column, the selected event id assigned to the event id variable.
             if (e.ColumnIndex == 6)
             {
-                even = Convert.ToInt32(dataGridViewEvent.Rows[e.RowIndex].Cells[0].Value);
+                eventID = Convert.ToInt32(dataGridViewEvent.Rows[e.RowIndex].Cells[0].Value);
                 this.Hide();
                 frmAddParticipantToEvent frmAddParticipantToEvent = new frmAddParticipantToEvent();
                 frmAddParticipantToEvent.Show();
