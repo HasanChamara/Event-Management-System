@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             this.pnlSide = new System.Windows.Forms.Panel();
+            this.btnAdminDashboard = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnBookings = new System.Windows.Forms.Button();
             this.btnBook = new System.Windows.Forms.Button();
             this.btnAddParticipant = new System.Windows.Forms.Button();
             this.btnAddEvent = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.btnBookings = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.btnAdminDashboard = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlSide.SuspendLayout();
+            this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSide
@@ -53,6 +55,39 @@
             this.pnlSide.Name = "pnlSide";
             this.pnlSide.Size = new System.Drawing.Size(220, 643);
             this.pnlSide.TabIndex = 0;
+            // 
+            // btnAdminDashboard
+            // 
+            this.btnAdminDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminDashboard.Location = new System.Drawing.Point(0, 53);
+            this.btnAdminDashboard.Name = "btnAdminDashboard";
+            this.btnAdminDashboard.Size = new System.Drawing.Size(220, 40);
+            this.btnAdminDashboard.TabIndex = 0;
+            this.btnAdminDashboard.Text = "Admin Dashboard";
+            this.btnAdminDashboard.UseVisualStyleBackColor = true;
+            this.btnAdminDashboard.Click += new System.EventHandler(this.btnAdminDashboard_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(0, 574);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(220, 40);
+            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnBookings
+            // 
+            this.btnBookings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBookings.Location = new System.Drawing.Point(0, 238);
+            this.btnBookings.Name = "btnBookings";
+            this.btnBookings.Size = new System.Drawing.Size(220, 40);
+            this.btnBookings.TabIndex = 4;
+            this.btnBookings.Text = "Bookings";
+            this.btnBookings.UseVisualStyleBackColor = true;
+            this.btnBookings.Click += new System.EventHandler(this.btnBookings_Click);
             // 
             // btnBook
             // 
@@ -89,44 +124,23 @@
             // 
             // pnlMain
             // 
+            this.pnlMain.BackColor = System.Drawing.Color.White;
+            this.pnlMain.Controls.Add(this.label1);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(220, 0);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(823, 643);
             this.pnlMain.TabIndex = 1;
             // 
-            // btnBookings
+            // label1
             // 
-            this.btnBookings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBookings.Location = new System.Drawing.Point(0, 238);
-            this.btnBookings.Name = "btnBookings";
-            this.btnBookings.Size = new System.Drawing.Size(220, 40);
-            this.btnBookings.TabIndex = 4;
-            this.btnBookings.Text = "Bookings";
-            this.btnBookings.UseVisualStyleBackColor = true;
-            this.btnBookings.Click += new System.EventHandler(this.btnBookings_Click);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(0, 574);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(220, 40);
-            this.btnLogout.TabIndex = 5;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnAdminDashboard
-            // 
-            this.btnAdminDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdminDashboard.Location = new System.Drawing.Point(0, 53);
-            this.btnAdminDashboard.Name = "btnAdminDashboard";
-            this.btnAdminDashboard.Size = new System.Drawing.Size(220, 40);
-            this.btnAdminDashboard.TabIndex = 0;
-            this.btnAdminDashboard.Text = "Admin Dashboard";
-            this.btnAdminDashboard.UseVisualStyleBackColor = true;
-            this.btnAdminDashboard.Click += new System.EventHandler(this.btnAdminDashboard_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(182, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(433, 39);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Event Management System";
             // 
             // frmAdminDashboard
             // 
@@ -139,6 +153,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdminDashboard";
             this.pnlSide.ResumeLayout(false);
+            this.pnlMain.ResumeLayout(false);
+            this.pnlMain.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -153,5 +169,6 @@
         private System.Windows.Forms.Button btnBookings;
         private System.Windows.Forms.Button btnAdminDashboard;
         public System.Windows.Forms.Panel pnlMain;
+        private System.Windows.Forms.Label label1;
     }
 }
