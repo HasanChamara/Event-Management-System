@@ -61,12 +61,8 @@ namespace EventManagementSystem
             if (e.ColumnIndex == 6)
             {
                 eventID = Convert.ToInt32(dataGridViewEvent.Rows[e.RowIndex].Cells[0].Value);
-                this.Hide();
                 frmAddParticipantToEvent frmAddParticipantToEvent = new frmAddParticipantToEvent();
-                frmAddParticipantToEvent.Show();
-                
-
-
+                frmAddParticipantToEvent.ShowDialog();
             }
         }
     }

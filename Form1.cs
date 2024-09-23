@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace EventManagementSystem
 {
@@ -16,5 +17,47 @@ namespace EventManagementSystem
         {
             InitializeComponent();
         }
+
+        string connectionString = "server=localhost;user=root;database=eventmanagement;port=3306;password=Chamara.19566";
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // retrieve event details and display them in the datagridview
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT * FROM event";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                MySqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    dataGridViewEvents.Rows.Add(reader["id"].ToString(), reader["event_name"].ToString(), reader["location"].ToString(), reader["date"].ToString(), reader["description"].ToString(), reader["capacity"].ToString());
+                }
+
+                connection.Close();
+            }
+
+            // retrieve participant details and display them in the datagridview
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT * FROM participant";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                MySqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    dataGridViewParticipants.Rows.Add(reader["id"].ToString(), reader["name"].ToString(), reader["email"].ToString(), reader["phone"].ToString(), reader["address"].ToString());
+                }
+
+                connection.Close();
+            }
+
+        }
     }
+
+
 }

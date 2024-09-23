@@ -45,7 +45,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(317, 25);
+            this.label2.Location = new System.Drawing.Point(341, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 31);
             this.label2.TabIndex = 6;
@@ -55,7 +55,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(146, 85);
+            this.label1.Location = new System.Drawing.Point(180, 85);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 20);
             this.label1.TabIndex = 7;
@@ -65,7 +65,7 @@
             // 
             this.comboEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboEvents.FormattingEnabled = true;
-            this.comboEvents.Location = new System.Drawing.Point(259, 83);
+            this.comboEvents.Location = new System.Drawing.Point(293, 83);
             this.comboEvents.Name = "comboEvents";
             this.comboEvents.Size = new System.Drawing.Size(279, 24);
             this.comboEvents.TabIndex = 8;
@@ -91,11 +91,11 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewEventParticipant.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewEventParticipant.Location = new System.Drawing.Point(15, 130);
+            this.dataGridViewEventParticipant.Location = new System.Drawing.Point(12, 139);
             this.dataGridViewEventParticipant.Name = "dataGridViewEventParticipant";
             this.dataGridViewEventParticipant.RowHeadersVisible = false;
             this.dataGridViewEventParticipant.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewEventParticipant.Size = new System.Drawing.Size(748, 374);
+            this.dataGridViewEventParticipant.Size = new System.Drawing.Size(799, 374);
             this.dataGridViewEventParticipant.TabIndex = 10;
             // 
             // id
@@ -136,7 +136,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(775, 526);
+            this.ClientSize = new System.Drawing.Size(823, 643);
             this.Controls.Add(this.dataGridViewEventParticipant);
             this.Controls.Add(this.comboEvents);
             this.Controls.Add(this.label1);

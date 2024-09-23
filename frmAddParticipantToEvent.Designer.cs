@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewParticipant = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,11 +46,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(232, 22);
+            this.label2.Location = new System.Drawing.Point(240, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(305, 31);
+            this.label2.Size = new System.Drawing.Size(319, 31);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Add Participant to Event";
+            this.label2.Text = "Add Participants to Event";
             // 
             // dataGridViewParticipant
             // 
@@ -65,19 +65,19 @@
             this.date,
             this.description,
             this.select});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LawnGreen;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewParticipant.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LawnGreen;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewParticipant.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewParticipant.Location = new System.Drawing.Point(12, 81);
             this.dataGridViewParticipant.Name = "dataGridViewParticipant";
             this.dataGridViewParticipant.RowHeadersVisible = false;
             this.dataGridViewParticipant.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewParticipant.Size = new System.Drawing.Size(767, 392);
+            this.dataGridViewParticipant.Size = new System.Drawing.Size(799, 473);
             this.dataGridViewParticipant.TabIndex = 9;
             // 
             // id
@@ -123,7 +123,7 @@
             // btnAddToEvent
             // 
             this.btnAddToEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddToEvent.Location = new System.Drawing.Point(665, 493);
+            this.btnAddToEvent.Location = new System.Drawing.Point(712, 584);
             this.btnAddToEvent.Name = "btnAddToEvent";
             this.btnAddToEvent.Size = new System.Drawing.Size(99, 32);
             this.btnAddToEvent.TabIndex = 10;
@@ -134,7 +134,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(546, 493);
+            this.btnCancel.Location = new System.Drawing.Point(593, 584);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(99, 32);
             this.btnCancel.TabIndex = 11;
@@ -147,12 +147,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(791, 565);
+            this.ClientSize = new System.Drawing.Size(823, 643);
+            this.ControlBox = false;
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddToEvent);
             this.Controls.Add(this.dataGridViewParticipant);
             this.Controls.Add(this.label2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmAddParticipantToEvent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddParticipantToEvent";

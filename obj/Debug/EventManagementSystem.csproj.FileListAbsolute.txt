@@ -47,3 +47,4 @@ E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSys
 E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSystem.frmBook.resources
 E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSystem.frmBooking.resources
 E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSystem.frmAddParticipantToEvent.resources
+E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSystem.Form1.resources

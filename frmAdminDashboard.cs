@@ -46,5 +46,32 @@ namespace EventManagementSystem
             pnlMain.Controls.Add(frmBook);
             frmBook.Show();
         }
+
+        private void btnAdminDashboard_Click(object sender, EventArgs e)
+        {
+            pnlMain.Controls.Clear();
+            Form1 form1 = new Form1();
+            form1.TopLevel = false;
+            form1.AutoScroll = true;
+            pnlMain.Controls.Add(form1);
+            form1.Show();
+        }
+
+        private void btnBookings_Click(object sender, EventArgs e)
+        {
+            pnlMain.Controls.Clear();
+            frmBooking frmBooking = new frmBooking();
+            frmBooking.TopLevel = false;
+            frmBooking.AutoScroll = true;
+            pnlMain.Controls.Add(frmBooking);
+            frmBooking.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
+        }
     }
 }

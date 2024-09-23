@@ -19,7 +19,7 @@ namespace EventManagementSystem
             InitializeComponent();
         }
 
-        string connectionString = "server=localhost;user=root;database=eventmanagement;port=3306;password=";
+        string connectionString = "server=localhost;user=root;database=eventmanagement;port=3306;password=Chamara.19566";
 
 
 
@@ -37,7 +37,10 @@ namespace EventManagementSystem
                 {
                     if (user.Role == "admin")
                     {
-                        MessageBox.Show("Admin login successful!");
+                        //MessageBox.Show("Admin login successful!");
+                        this.Hide();
+                        frmAdminDashboard adminDashboard = new frmAdminDashboard();
+                        adminDashboard.Show();
                     }
                     else if (user.Role == "participant")
                     {

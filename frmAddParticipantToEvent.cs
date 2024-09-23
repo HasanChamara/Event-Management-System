@@ -53,9 +53,6 @@ namespace EventManagementSystem
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmBook frmBook = new frmBook();
-            frmBook.Show();
-
         }
 
         private void btnAddToEvent_Click(object sender, EventArgs e)
@@ -105,6 +102,7 @@ namespace EventManagementSystem
                         transaction.Commit();
 
                         MessageBox.Show("Participants added to the event successfully!");
+                        this.Close();
                     }
                     catch (Exception ex)
                     {

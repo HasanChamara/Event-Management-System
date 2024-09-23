@@ -29,16 +29,22 @@
         private void InitializeComponent()
         {
             this.pnlSide = new System.Windows.Forms.Panel();
-            this.btnAddEvent = new System.Windows.Forms.Button();
-            this.btnAddParticipant = new System.Windows.Forms.Button();
-            this.pnlMain = new System.Windows.Forms.Panel();
             this.btnBook = new System.Windows.Forms.Button();
+            this.btnAddParticipant = new System.Windows.Forms.Button();
+            this.btnAddEvent = new System.Windows.Forms.Button();
+            this.pnlMain = new System.Windows.Forms.Panel();
+            this.btnBookings = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnAdminDashboard = new System.Windows.Forms.Button();
             this.pnlSide.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSide
             // 
             this.pnlSide.BackColor = System.Drawing.Color.PowderBlue;
+            this.pnlSide.Controls.Add(this.btnAdminDashboard);
+            this.pnlSide.Controls.Add(this.btnLogout);
+            this.pnlSide.Controls.Add(this.btnBookings);
             this.pnlSide.Controls.Add(this.btnBook);
             this.pnlSide.Controls.Add(this.btnAddParticipant);
             this.pnlSide.Controls.Add(this.btnAddEvent);
@@ -48,27 +54,38 @@
             this.pnlSide.Size = new System.Drawing.Size(220, 643);
             this.pnlSide.TabIndex = 0;
             // 
-            // btnAddEvent
+            // btnBook
             // 
-            this.btnAddEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEvent.Location = new System.Drawing.Point(0, 70);
-            this.btnAddEvent.Name = "btnAddEvent";
-            this.btnAddEvent.Size = new System.Drawing.Size(220, 40);
-            this.btnAddEvent.TabIndex = 0;
-            this.btnAddEvent.Text = "Add Event";
-            this.btnAddEvent.UseVisualStyleBackColor = true;
-            this.btnAddEvent.Click += new System.EventHandler(this.btnAddEvent_Click);
+            this.btnBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBook.Location = new System.Drawing.Point(0, 192);
+            this.btnBook.Name = "btnBook";
+            this.btnBook.Size = new System.Drawing.Size(220, 40);
+            this.btnBook.TabIndex = 3;
+            this.btnBook.Text = "Participant Dashboard";
+            this.btnBook.UseVisualStyleBackColor = true;
+            this.btnBook.Click += new System.EventHandler(this.btnBook_Click);
             // 
             // btnAddParticipant
             // 
             this.btnAddParticipant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddParticipant.Location = new System.Drawing.Point(0, 116);
+            this.btnAddParticipant.Location = new System.Drawing.Point(0, 145);
             this.btnAddParticipant.Name = "btnAddParticipant";
             this.btnAddParticipant.Size = new System.Drawing.Size(220, 40);
-            this.btnAddParticipant.TabIndex = 1;
-            this.btnAddParticipant.Text = "Add Participant";
+            this.btnAddParticipant.TabIndex = 2;
+            this.btnAddParticipant.Text = "Participant Management";
             this.btnAddParticipant.UseVisualStyleBackColor = true;
             this.btnAddParticipant.Click += new System.EventHandler(this.btnAddParticipant_Click);
+            // 
+            // btnAddEvent
+            // 
+            this.btnAddEvent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEvent.Location = new System.Drawing.Point(0, 99);
+            this.btnAddEvent.Name = "btnAddEvent";
+            this.btnAddEvent.Size = new System.Drawing.Size(220, 40);
+            this.btnAddEvent.TabIndex = 1;
+            this.btnAddEvent.Text = "Event Management";
+            this.btnAddEvent.UseVisualStyleBackColor = true;
+            this.btnAddEvent.Click += new System.EventHandler(this.btnAddEvent_Click);
             // 
             // pnlMain
             // 
@@ -78,16 +95,38 @@
             this.pnlMain.Size = new System.Drawing.Size(823, 643);
             this.pnlMain.TabIndex = 1;
             // 
-            // btnBook
+            // btnBookings
             // 
-            this.btnBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBook.Location = new System.Drawing.Point(0, 163);
-            this.btnBook.Name = "btnBook";
-            this.btnBook.Size = new System.Drawing.Size(220, 40);
-            this.btnBook.TabIndex = 2;
-            this.btnBook.Text = "Book";
-            this.btnBook.UseVisualStyleBackColor = true;
-            this.btnBook.Click += new System.EventHandler(this.btnBook_Click);
+            this.btnBookings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBookings.Location = new System.Drawing.Point(0, 238);
+            this.btnBookings.Name = "btnBookings";
+            this.btnBookings.Size = new System.Drawing.Size(220, 40);
+            this.btnBookings.TabIndex = 4;
+            this.btnBookings.Text = "Bookings";
+            this.btnBookings.UseVisualStyleBackColor = true;
+            this.btnBookings.Click += new System.EventHandler(this.btnBookings_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(0, 574);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(220, 40);
+            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnAdminDashboard
+            // 
+            this.btnAdminDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminDashboard.Location = new System.Drawing.Point(0, 53);
+            this.btnAdminDashboard.Name = "btnAdminDashboard";
+            this.btnAdminDashboard.Size = new System.Drawing.Size(220, 40);
+            this.btnAdminDashboard.TabIndex = 0;
+            this.btnAdminDashboard.Text = "Admin Dashboard";
+            this.btnAdminDashboard.UseVisualStyleBackColor = true;
+            this.btnAdminDashboard.Click += new System.EventHandler(this.btnAdminDashboard_Click);
             // 
             // frmAdminDashboard
             // 
@@ -109,7 +148,10 @@
         private System.Windows.Forms.Panel pnlSide;
         private System.Windows.Forms.Button btnAddParticipant;
         private System.Windows.Forms.Button btnAddEvent;
-        private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Button btnBook;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnBookings;
+        private System.Windows.Forms.Button btnAdminDashboard;
+        public System.Windows.Forms.Panel pnlMain;
     }
 }
