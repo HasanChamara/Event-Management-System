@@ -37,7 +37,6 @@ namespace EventManagementSystem
                 {
                     if (user.Role == "admin")
                     {
-                        //MessageBox.Show("Admin login successful!");
                         this.Hide();
                         frmAdminDashboard adminDashboard = new frmAdminDashboard();
                         adminDashboard.Show();
