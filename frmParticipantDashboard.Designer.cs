@@ -33,6 +33,7 @@
             this.pnlSide = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnAddEvent = new System.Windows.Forms.Button();
+            this.btnViewEvents = new System.Windows.Forms.Button();
             this.pnlMain.SuspendLayout();
             this.pnlSide.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +61,7 @@
             // pnlSide
             // 
             this.pnlSide.BackColor = System.Drawing.Color.PowderBlue;
+            this.pnlSide.Controls.Add(this.btnViewEvents);
             this.pnlSide.Controls.Add(this.btnLogout);
             this.pnlSide.Controls.Add(this.btnAddEvent);
             this.pnlSide.Dock = System.Windows.Forms.DockStyle.Left;
@@ -87,6 +89,18 @@
             this.btnAddEvent.TabIndex = 1;
             this.btnAddEvent.Text = "Event Management";
             this.btnAddEvent.UseVisualStyleBackColor = true;
+            this.btnAddEvent.Click += new System.EventHandler(this.btnAddEvent_Click);
+            // 
+            // btnViewEvents
+            // 
+            this.btnViewEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewEvents.Location = new System.Drawing.Point(0, 145);
+            this.btnViewEvents.Name = "btnViewEvents";
+            this.btnViewEvents.Size = new System.Drawing.Size(220, 40);
+            this.btnViewEvents.TabIndex = 6;
+            this.btnViewEvents.Text = "View Events";
+            this.btnViewEvents.UseVisualStyleBackColor = true;
+            this.btnViewEvents.Click += new System.EventHandler(this.btnViewEvents_Click);
             // 
             // frmParticipantDashboard
             // 
@@ -96,6 +110,7 @@
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlSide);
             this.Name = "frmParticipantDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmParticipantDashboard";
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
@@ -111,5 +126,6 @@
         private System.Windows.Forms.Panel pnlSide;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnAddEvent;
+        private System.Windows.Forms.Button btnViewEvents;
     }
 }

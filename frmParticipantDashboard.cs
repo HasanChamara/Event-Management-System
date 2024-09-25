@@ -16,5 +16,19 @@ namespace EventManagementSystem
         {
             InitializeComponent();
         }
+
+        private void btnAddEvent_Click(object sender, EventArgs e)
+        {
+            pnlMain.Controls.Clear();
+            frmAddEvent addEvent = new frmAddEvent();
+            addEvent.TopLevel = false;
+            pnlMain.Controls.Add(addEvent);
+            addEvent.Show();
+        }
+
+        private void btnViewEvents_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
