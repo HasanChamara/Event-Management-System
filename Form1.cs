@@ -63,7 +63,7 @@ namespace EventManagementSystem
 
         private void dataGridViewEvents_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // click edit button or delete button
+           
             if (e.ColumnIndex == 6)
             {
                 // edit event
@@ -93,6 +93,7 @@ namespace EventManagementSystem
 
                     dataGridViewEvents.Rows.RemoveAt(e.RowIndex);
                 }
+                
             }
         }
     }

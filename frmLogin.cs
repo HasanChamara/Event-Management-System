@@ -43,7 +43,9 @@ namespace EventManagementSystem
                     }
                     else if (user.Role == "participant")
                     {
-                        MessageBox.Show("Participant login successful!");
+                        this.Hide();
+                        frmParticipantDashboard participantDashboard = new frmParticipantDashboard();
+                        participantDashboard.Show();
                     }
                 }
                 else
