@@ -28,7 +28,11 @@ namespace EventManagementSystem
 
         private void btnViewEvents_Click(object sender, EventArgs e)
         {
-
+            frmViewEvents viewEvents = new frmViewEvents();
+            pnlMain.Controls.Clear();
+            viewEvents.TopLevel = false;
+            pnlMain.Controls.Add(viewEvents);
+            viewEvents.Show();
         }
     }
 }

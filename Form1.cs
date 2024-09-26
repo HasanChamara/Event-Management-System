@@ -13,6 +13,8 @@ namespace EventManagementSystem
 {
     public partial class Form1 : Form
     {
+
+        public static int evenId;
         public Form1()
         {
             InitializeComponent();
@@ -48,6 +50,7 @@ namespace EventManagementSystem
                 MySqlCommand command = new MySqlCommand(query, connection);
                 MySqlDataReader reader = command.ExecuteReader();
 
+
                 while (reader.Read())
                 {
                     dataGridViewParticipants.Rows.Add(reader["id"].ToString(), reader["name"].ToString(), reader["email"].ToString(), reader["phone"].ToString(), reader["address"].ToString());
@@ -56,6 +59,41 @@ namespace EventManagementSystem
                 connection.Close();
             }
 
+        }
+
+        private void dataGridViewEvents_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // click edit button or delete button
+            if (e.ColumnIndex == 6)
+            {
+                // edit event
+                evenId = Convert.ToInt32(dataGridViewEvents.Rows[e.RowIndex].Cells[0].Value);
+                frmEditEvent editEvent = new frmEditEvent();
+                editEvent.ShowDialog();
+                
+                
+            }
+            else if (e.ColumnIndex == 7)
+            {
+                // delete event
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this event?", "Delete Event", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    using (MySqlConnection connection = new MySqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        string query = "DELETE FROM event WHERE id = @id";
+                        MySqlCommand command = new MySqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@id", dataGridViewEvents.Rows[e.RowIndex].Cells[0].Value.ToString());
+                        command.ExecuteNonQuery();
+
+                        connection.Close();
+                    }
+
+                    dataGridViewEvents.Rows.RemoveAt(e.RowIndex);
+                }
+            }
         }
     }
 

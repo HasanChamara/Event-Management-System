@@ -129,6 +129,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmViewEvents";
             this.Text = "frmViewEvents";
+            this.Load += new System.EventHandler(this.frmViewEvents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEvents)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

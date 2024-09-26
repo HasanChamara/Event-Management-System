@@ -49,3 +49,5 @@ E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSys
 E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSystem.frmAddParticipantToEvent.resources
 E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSystem.Form1.resources
 E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSystem.frmParticipantDashboard.resources
+E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSystem.frmViewEvents.resources
+E:\C# Projects\Github Repos\Event-Management-System\obj\Debug\EventManagementSystem.frmEditEvent.resources
