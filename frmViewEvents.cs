@@ -30,13 +30,20 @@ namespace EventManagementSystem
                     {
                         connection.Open();
 
-                        string query = "SELECT * FROM event";
+                        string query = "SELECT id, event_name, location, DATE_FORMAT(date, '%Y-%m-%d') as event_date, description, capacity FROM event";
                         MySqlCommand command = new MySqlCommand(query, connection);
                         MySqlDataReader reader = command.ExecuteReader();
 
                         while (reader.Read())
                         {
-                            dataGridViewEvents.Rows.Add(reader["id"].ToString(), reader["event_name"].ToString(), reader["location"].ToString(), reader["date"].ToString(), reader["description"].ToString(), reader["capacity"].ToString());
+                            dataGridViewEvents.Rows.Add(
+                                reader["id"].ToString(),
+                                reader["event_name"].ToString(),
+                                reader["location"].ToString(),
+                                reader["event_date"].ToString(),
+                                reader["description"].ToString(),
+                                reader["capacity"].ToString()
+                            );
                         }
 
                         connection.Close();
@@ -47,13 +54,20 @@ namespace EventManagementSystem
                 {
                     connection.Open();
 
-                    string query = "SELECT * FROM event";
+                    string query = "SELECT id, event_name, location, DATE_FORMAT(date, '%Y-%m-%d') as event_date, description, capacity FROM event";
                     MySqlCommand command = new MySqlCommand(query, connection);
                     MySqlDataReader reader = command.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        dataGridViewEvents.Rows.Add(reader["id"].ToString(), reader["event_name"].ToString(), reader["location"].ToString(), reader["date"].ToString(), reader["description"].ToString(), reader["capacity"].ToString());
+                        dataGridViewEvents.Rows.Add(
+                            reader["id"].ToString(),
+                            reader["event_name"].ToString(),
+                            reader["location"].ToString(),
+                            reader["event_date"].ToString(),
+                            reader["description"].ToString(),
+                            reader["capacity"].ToString()
+                        );
                     }
 
                     connection.Close();
